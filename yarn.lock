@@ -1919,6 +1919,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@stitches/react@npm:^0.2.0-canary.7":
+  version: 0.2.0-canary.7
+  resolution: "@stitches/react@npm:0.2.0-canary.7"
+  peerDependencies:
+    react: ">= 17.0.0"
+  checksum: 4cf03a8755714b0599020a65ccfc08ea1900e0e3ed58c0320b98196415f55eaabea8d506eaeb2c7d230165b2555c59c96193e2cbda9f3da7f89f0eafcec15bba
+  languageName: node
+  linkType: hard
+
 "@szmarczak/http-timer@npm:^1.1.2":
   version: 1.1.2
   resolution: "@szmarczak/http-timer@npm:1.1.2"
@@ -6734,10 +6743,12 @@ fsevents@~2.3.1:
   version: 0.0.0-use.local
   resolution: "gatsby-starter-hello-world@workspace:."
   dependencies:
+    "@stitches/react": ^0.2.0-canary.7
     "@types/node": ^15.12.2
     "@types/react": ^17.0.11
     "@types/react-dom": ^17.0.7
     gatsby: ^3.6.2
+    gatsby-theme-stitches: ^0.1.1
     prettier: 2.2.1
     react: ^17.0.1
     react-dom: ^17.0.1
@@ -6763,6 +6774,17 @@ fsevents@~2.3.1:
     node-fetch: ^2.6.1
     uuid: 3.4.0
   checksum: 0b26e6c97db2ce69e885634b13aad4eb37ea86c7d69319cd9f9a47ae11c431dc0888b477f9bc844e78cadaac1521cdcbd5d3e87786cb4e4f2d3149af1e6991aa
+  languageName: node
+  linkType: hard
+
+"gatsby-theme-stitches@npm:^0.1.1":
+  version: 0.1.1
+  resolution: "gatsby-theme-stitches@npm:0.1.1"
+  peerDependencies:
+    "@stitches/react": ^0.1.0
+    gatsby: ">=2.0.0"
+    react: ^16.8.0 || ^17.0.0
+  checksum: c823438a80499cf01ba0a4ff056bc00924c3621e34bd53dfb22d931b07b72c95665425542aa230a4261ffdc02f0a32d38e67aa20f4467eeb0d01b63274e8d345
   languageName: node
   linkType: hard
 
