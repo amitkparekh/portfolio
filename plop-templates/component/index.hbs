@@ -1,0 +1,7 @@
+{{#if wantContainer}}
+  import {{pascalCase name}} from './{{pascalCase name}}.container'
+{{else}}
+  import {{pascalCase name}} from './{{pascalCase name}}.view'
+{{/if}}
+
+export default {{pascalCase name}}

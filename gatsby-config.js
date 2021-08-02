@@ -6,5 +6,5 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: ['gatsby-theme-stitches']
+  plugins: ["@chakra-ui/gatsby-plugin", `gatsby-plugin-netlify-cms`],
 }

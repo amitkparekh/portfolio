@@ -103,12 +103,12 @@ public
 
 # Yarn v2
 .yarn/*
-!.yarn/cache
-!.yarn/patches
-!.yarn/plugins
+# !.yarn/cache
+# !.yarn/patches
+# !.yarn/plugins
 !.yarn/releases
-!.yarn/sdks
-!.yarn/versions
+# !.yarn/sdks
+# !.yarn/versions
 
 ### VisualStudioCode ###
 .vscode/*

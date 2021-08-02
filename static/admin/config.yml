@@ -1,0 +1,111 @@
+backend:
+  name: git-gateway
+  branch: main
+
+
+media_folder: "static/media"
+public_folder: "media"
+local_backend: true
+
+collections: 
+  - name: 'companies'
+    label: 'Companies'
+    label_singular: 'Company'
+    folder: 'content/companies'
+    create: true
+    identifier_field: name
+    editor:
+     preview: false
+    sortable_fields: 
+      - name
+    fields: 
+      - {label: "Name", name: "name", widget: "string"}
+
+  - name: 'people'
+    label: People
+    label_singular: 'Person'
+    folder: 'content/people'
+    create: true
+    identifier_field: name
+    fields: 
+      - label: "Name"
+        name: "name"
+        widget: "string"
+      - label: "Link"
+        name: "link"
+        widget: "string"
+        required: false
+      
+
+  - name: 'education'
+    label: Education
+    folder: 'content/education'
+    create: true
+    sortable_fields: 
+      - title
+    fields:   
+      - label: Title
+        name: title
+        widget: string
+      - label: Institution
+        name: institution
+        widget: relation
+        collection: companies
+        value_field: name
+        search_fields:
+          - name
+      - label: Dates
+        name: dates
+        widget: object
+        fields: 
+          - name: start
+            label: Start Date
+            widget: datetime
+            date_format: MM/YYYY
+            format: MM/YYYY
+            time_format: false
+          - name: end
+            label: Graduation Date
+            widget: datetime
+            date_format: MM/YYYY
+            format: MM/YYYY
+            time_format: false
+      - label: Comment
+        name: comment
+        widget: string
+        required: false
+      - label: Body
+        name: body
+        widget: markdown
+        required: false
+
+    
+  - name: 'publications'
+    label: 'Publications'
+    label_singular: 'Publication'
+    folder: 'content/publication'
+    create: true
+    identifier_field: name
+    sortable_fields: 
+      - name
+    fields: 
+      - label: Name
+        name: name
+        widget: string
+      - label: Metadata
+        name: metadata
+        widget: object
+        fields:
+        - label: Draft
+          name: draft
+          widget: boolean
+        - label: Enable
+          name: enable
+          widget: boolean
+          default: true
+      - label: Publication date
+        name: date
+        widget: datetime
+        date_format: YYYY
+        format: YYYY
+        time_format: false

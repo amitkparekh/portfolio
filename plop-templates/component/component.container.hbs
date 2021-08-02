@@ -1,0 +1,19 @@
+import React from 'react'
+import { Box } from "@chakra-ui/react"
+
+
+{{#if isLinkedWithView}}
+  import {{pascalCase name}} from "./{{pascalCase name}}.view"
+{{/if}}
+
+
+
+const {{pascalCase name}}Container: React.FC = () => {
+  return (
+    <>
+      <Box>{{pascalCase name}}</Box>
+    </>
+  )
+}
+
+export default {{pascalCase name}}Container
