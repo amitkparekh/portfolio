@@ -23,7 +23,7 @@
     "@emotion/styled": "^11",
     "date-fns": "^2.23.0",
     "framer-motion": "^4",
-    "gatsby": "^3.10.2",
+    "gatsby": "^4.25.7",
     "gatsby-plugin-netlify-cms": "^5.10.0",
     "gatsby-plugin-react-helmet": "^4.10.0",
     "gatsby-source-filesystem": "^3.10.0",
